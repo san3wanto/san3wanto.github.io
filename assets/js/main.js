@@ -88,16 +88,18 @@ function showSlides(n) {
   // captionText.innerHTML = dots[slideIndex - 1].alt;
 }
 
-const showContact = (toglId, sdbarId) => {
+const showContact = (toglId, sdbarId, scId) => {
   const sdbar = document.getElementById(sdbarId),
-    togl = document.getElementById(toglId);
+    togl = document.getElementById(toglId),
+    scrl = document.getElementById(scId);
   if (sdbar && togl) {
     togl.addEventListener("click", () => {
       sdbar.classList.toggle("show");
+      scrl.classList.toggle("sc");
     });
   }
 };
-showContact("call-act", "asd");
+showContact("call-act", "asd", "scn");
 
 // const showMenu = (toggleId, navId) => {
 //   const toggle = document.getElementById(toggleId),
