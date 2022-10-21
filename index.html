@@ -9,15 +9,17 @@
   </head>
   <body>
     <header>
-      <a href="#" class="logo"><span>My</span>Port</a>
+      <div class="head-mob">
+        <a href="#" class="logo"><span>My</span>Port</a>
+        <div class="btn" id="btn-toggle">
+          <i class="bx bx-menu" id="nav-toggle"></i>
+        </div>
+      </div>
       <div class="menu" id="nav-menu">
         <a href="#home" class="nav-link active">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#work" class="nav-link">Work</a>
-      </div>
-      <div class="btn" id="btn-toggle">
-        <i class="bx bx-menu" id="nav-toggle"></i>
       </div>
     </header>
 
@@ -165,14 +167,15 @@
                   <div class="numbertext">6 / 6</div>
                   <img src="assets/img/ilus6.jpg" style="width: 100%" />
                 </div>
+                <div class="but-np">
+                  <!-- Next/previous controls -->
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-                <!-- Next/previous controls -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <!-- Caption text -->
-                <div class="caption-container">
-                  <p id="caption"></p>
+                  Caption text
+                  <div class="caption-container">
+                    <p id="caption"></p>
+                  </div>
                 </div>
               </div>
             </div>
