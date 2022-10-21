@@ -87,3 +87,26 @@ function showSlides(n) {
   // dots[slideIndex - 1].className += " active";
   // captionText.innerHTML = dots[slideIndex - 1].alt;
 }
+
+const showContact = (toglId, sdbarId) => {
+  const sdbar = document.getElementById(sdbarId),
+    togl = document.getElementById(toglId);
+  if (sdbar && togl) {
+    togl.addEventListener("click", () => {
+      sdbar.classList.toggle("show");
+    });
+  }
+};
+showContact("call-act", "asd");
+
+// const showMenu = (toggleId, navId) => {
+//   const toggle = document.getElementById(toggleId),
+//     nav = document.getElementById(navId);
+
+//   if (toggle && nav) {
+//     toggle.addEventListener("click", () => {
+//       nav.classList.toggle("show");
+//     });
+//   }
+// };
+// showMenu("nav-toggle", "nav-menu");

@@ -35,6 +35,7 @@ main {
   padding-right: 0;
 }
 header {
+  background-color: #ffff;
   z-index: 999;
   position: fixed;
   top: 0;
@@ -155,7 +156,7 @@ header.sticky .logo {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   height: 100vh;
   padding: 5rem 5rem;
@@ -192,7 +193,7 @@ header.sticky .logo {
 .home-title {
   text-align: left;
   color: #293462;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
 }
 
@@ -575,6 +576,81 @@ footer {
   background-image: linear-gradient(to top, black, var(--birungu));
   padding: 1rem;
   margin-top: 2rem;
+}
+
+aside {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  right: -300px;
+  width: 300px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 8px 0 0 8px;
+  background-color: #ffff;
+  padding: 20px;
+  transform: translateY(-50%);
+  transition: right 0.4s linear;
+}
+
+aside.show {
+  right: 0;
+}
+
+aside .call-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: var(--birungu);
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  color: #ffff;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  left: -95px;
+  top: 40%;
+  transform: translateY(-50%) rotate(-90deg);
+  transition: 0.5;
+}
+
+aside .call-action:hover {
+  background-color: var(--merah);
+}
+
+aside h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: var(--merah);
+}
+
+aside .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+aside .form-group label {
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 2px;
+  color: var(--birungu);
+}
+
+aside #submit-btn {
+  width: 100%;
+  border: none;
+  margin-top: 8px;
+  background-color: var(--birungu);
+  color: #ffff;
+  padding: 7px;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
